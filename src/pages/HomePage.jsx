@@ -1,12 +1,18 @@
 import React, { useState } from "react";
 import { Link } from "react-router-dom";
+import { Helmet } from "react-helmet-async";
 
 function HomePage() {
- 
-
+  const title = "شرکت فولاد درخشش حدید | CNC";
+  const description =
+    "شرکت فولاد درخشش حدید: ارائه دهنده خدمات CNC با بالاترین کیفیت.";
   return (
     <>
       {/* HomePage */}
+      <Helmet>
+        <title>{title.slice(0, 60)}</title>
+        <meta name="description" content={description.slice(0, 160)} />
+      </Helmet>
       <div className="h-300 mt-4 m-6  mx-4 sm:mx-6 ">
         <video
           autoPlay
@@ -14,10 +20,11 @@ function HomePage() {
           loop
           playsInline
           className="w-full h-auto pl-6 pr-6 pb-3 object-cover "
-          poster="./src/images/picVideo-home.png"
+          preload="none"
+          poster="/images/picvideo-home.png"
         >
           <source
-            src="./src/images/video-logo-compressed.mp4"
+            src="/images/video-logo-compressed.mp4"
             type="video/mp4"
           />
           مرورگر شما از پخش ویدیو پشتیبانی نمی‌کند.
@@ -48,7 +55,12 @@ function HomePage() {
         </p>
       </div>
       <div className="h-screen w-full mt-8  ">
-        <img className="h-screen w-full " src="./src/images/one.JPG" alt="" />
+        <img
+          loading="lazy"
+          className="h-screen w-full "
+          src="/images/one.JPG"
+          alt="CNC"
+        />
       </div>
       <div className=" h-300 mt-8  ">
         <div
@@ -67,35 +79,11 @@ function HomePage() {
             و ماشین‌آلات صنعتی از دیگر توانمندی‌های ماست که با دقت و کیفیت بالا
             انجام می‌پذیرد.
           </p>
-          {/* <ul className=" sm:grid-cols-2 ">
-            <li className=" p-2   ">
-              <p>
-                برش لیزر فلزات تا ضخامت ۳۰ میلیمتر - طول ۷ متر
-                <br />
-                <span className="text-sm p-2 text-gray-600">
-                  ⚡️با قابلیت برش آلومینیوم⚡️
-                </span>
-              </p>
-            </li>
-            <li className="p-2 ">
-              <p>برش لیزر سطحی پروفیل، لوله و ناودانی</p>
-            </li>
-            <li className=" p-2">
-              <p>ارائه خدمات خم CNC شش محور</p>
-            </li>
-            <li className="p-2 ">
-              <p>ارائه خدمات حک فلزات</p>
-            </li>
-            <li className="   p-2 ">
-              <p>طراحی و ساخت تجهیزات و ماشین‌آلات صنعتی</p>
-            </li>
-          </ul> */}
         </div>
 
         <br />
       </div>
-     
-    
+
       <div
         className="part-4 flex flex-col lg:flex-row bg-white h-auto lg:h-[60vh] justify-center px-4 sm:px-8 lg:px-16 mb-16"
         data-aos="fade-left"
@@ -111,10 +99,11 @@ function HomePage() {
             muted
             loop
             playsInline
-            poster="./src/images/picVideo-home.png"
+            poster="/images/picvideo-home.png"
+            preload="none"
             className="w-full h-full object-cover"
           >
-            <source src="./src/images/video1homepage.mp4" type="video/mp4" />
+            <source src="/images/video1homepage.mp4" type="video/mp4" />
             Your browser does not support the video tag.
           </video>
         </div>
@@ -163,86 +152,14 @@ function HomePage() {
             loop
             playsInline
             className="w-full h-full object-cover "
-            poster="./src/images/picVideo-home.png"
+            preload="none"
+            poster="/images/picvideo-home.png"
           >
-            <source src="./src/images/video2-Homepage.mp4" type="video/mp4" />
+            <source src="/images/video2-homepage.mp4" type="video/mp4" />
             Your browser does not support the video tag.
           </video>
         </div>
       </div>
-      
-      {/* <div
-        className="part-4 flex bg-white h-80  justify-center ml-16 mr-16"
-        data-aos="fade-left"
-        data-aos-delay="0"
-      >
-        <div
-          className="part4-pic h-full w-1/2"
-          data-aos="fade-left"
-          data-aos-delay="1000"
-        >
-          <video
-            autoPlay
-            muted
-            loop
-            playsInline
-            poster="./src/images/picVideo-home.png"
-            className="h-full w-full object-cover  "
-          >
-            <source src="./src/images/video1homepage.mp4" type="video/mp4" />
-            Your browser does not support the video tag.
-          </video>
-        </div>
-
-        <div
-          className="part4-text1 w-1/2 h-full bg-white pr-12  flex flex-col  "
-          data-aos="fade-left"
-          data-aos-delay="0"
-        >
-          <h2 className="text-xl sm:text-2xl font-bold text-gray-800 mt-20 mb-10 text-right">
-            خمکاری CNC شش محور
-          </h2>
-
-          <p className="part4-lorem text-right ml-20 leading-loose">
-            خمکاری با دستگاه ۶ محور، این امکان را به ما می‌دهد که قطعات با
-            پیچیدگی‌های بالا را با دقت مطلوب به محصول تبدیل نماییم
-          </p>
-        </div>
-      </div>
-      <div
-        className="part-5 flex bg-white h-80 mx-auto my-40 justify-center ml-16 mr-16"
-        data-aos="fade-right"
-        data-aos-delay="0"
-      >
-       
-
-        <div className="part5-text1 w-1/2 h-full bg-white  mr-20">
-          <h2 className="text-xl sm:text-2xl font-bold text-gray-800 mt-20 mb-10 text-right">
-            دستگاه برش لیزر فایبر
-          </h2>
-          <p className="part5-lorem text-right leading-loose">
-            برش لیزر تا ضخامت ۳۰ میلیمتر و طول ۷ متر، همچنین قابلیت برش لیزر فلز
-            آلومینیوم. خدمات رسانی بدون وقفه در ۲۴ ساعت هر روز هفته و سه شیفت
-            کاری
-          </p>
-        </div>
-      
-        <div className="part5-pic h-full w-1/2">
-          <video
-            autoPlay
-            muted
-            loop
-            playsInline
-            className="w-full h-auto pl-6 pr-6 pb-3 object-cover"
-            data-aos="fade-left"
-            data-aos-delay="1000"
-            poster="./src/images/picVideo-home.png"
-          >
-            <source src="./src/images/video2-Homepage.mp4" type="video/mp4" />
-            Your browser does not support the video tag.
-          </video>
-        </div>
-      </div> */}
     </>
   );
 }

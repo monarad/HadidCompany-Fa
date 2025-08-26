@@ -1,22 +1,54 @@
 import { useEffect, useState } from "react";
 
 
-import { Routes, Route, Navigate, useLocation } from "react-router-dom";
+import { Routes, Route, Navigate, Outlet } from "react-router-dom";
 import HomePage from "./pages/HomePage";
-import DetailsPage from "./pages/DetailsPage";
+
 import PageNotFound from "./pages/404";
 
 import Footer from "./pages/Footer";
 import Customers from "./pages/Customers";
 import AboutUs from "./pages/AboutUs";
-import Contracting from "./pages/Contracting";
+
 import Products from "./pages/Products";
 import NavbarTest from "./pages/NavbarTest";
  import AOS from "aos";
  import "aos/dist/aos.css";
+import ContactUs from "./pages/ContactUs";
+import Gallery from "./pages/Gallery";
+import { Helmet } from "react-helmet-async";
 
+
+function SeoDefaults() {
+  return (
+    <Helmet prioritizeSeoTags>
+      <title> شرکت فولاد درخشش حدید |  CNC</title>
+      <meta
+        name="description"
+        content="شرکت فولاد درخشش حدید: ارائه دهنده خدمات CNC با بالاترین کیفیت."
+      />
+      {/* اختیاری: هم‌خوان با شبکه‌های اجتماعی */}
+      <meta property="og:title" content="شرکت فولاد درخشش حدید | CNC" />
+      <meta
+        property="og:description"
+        content="شرکت فولاد درخشش حدید: ارائه دهنده خدمات CNC با بالاترین کیفیت."
+      />
+      <meta name="twitter:card" content="summary" />
+    </Helmet>
+  );
+}
+
+function Layout() {
+  return (
+    <>
+      <SeoDefaults />
+      <Outlet />
+    </>
+  );
+}
 
 function App() {
+  
 
  
 
@@ -34,16 +66,19 @@ function App() {
 
       <NavbarTest>
         <Routes>
+          <Route element={<Layout />}/>
           <Route index element={<Navigate to="/home" replace />} />
           <Route path="/home" element={<HomePage />} />
-          <Route path="/home/:id" element={<DetailsPage />} />
+         
+          <Route path="/تماس با ما" element={<ContactUs/>}/>
           <Route path="/*" element={<PageNotFound />} />
           <Route path="/کارفرمایان" element={<Customers />} />
-          <Route path="/پیمانکاری" element={<Contracting />} />
+        
           <Route path="/محصولات" element={<Products />} />
           <Route path="/درباره ما" element={<AboutUs />} />
           <Route path="/صفحه اصلی" element={<HomePage />} />
-          {/* <Route path="/رزومه " element={<Rezume />} /> */}
+          <Route path="/گالری" element={<Gallery/>}/>
+         
         </Routes>
 
         <Footer />

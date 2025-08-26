@@ -1,10 +1,17 @@
-
 import React, { useState } from "react";
 import { Link } from "react-router-dom";
+import { Helmet } from "react-helmet-async";
 
 function Customers() {
+  const title = "مشتریان | کارفرمایان";
+  const description =
+    "مشتریان ما شامل طیف وسیعی از صنایع و کسب‌وکارها هستند که از خدمات ما بهره‌مند می‌شوند.";
   return (
     <>
+      <Helmet>
+        <title>{title.slice(0, 60)}</title>
+        <meta name="description" content={description.slice(0, 160)} />
+      </Helmet>
       <div className="w-full h-auto mt-10 flex flex-col items-center justify-center align-middle">
         <h1 className="text-4xl  font-bold ">Customers </h1>
         <p className="mt-8 text-center px-9 leading-loose">
@@ -67,4 +74,4 @@ function Customers() {
   );
 }
 
-export default Customers
+export default Customers;

@@ -21,6 +21,10 @@ export default {
       },
 
       keyframes: {
+        fadeIn: {
+          "0%": { opacity: "0", transform: "translateY(20px)" },
+          "100%": { opacity: "1", transform: "translateY(0)" },
+        },
         slideInFromLeft: {
           "0%": { opacity: "0", transform: "translateX(-50px)" },
           "100%": { opacity: "1", transform: "translateX(0)" },
@@ -38,6 +42,7 @@ export default {
         "slide-in-left": "slideInFromLeft 1s ease-out forwards",
         "slide-in-right": "slideInFromRight 1s ease-out forwards",
         "slide-from-left": "slide-from-left 1s ease-out forwards",
+        fadeIn: "fadeIn 0.5s ease-out forwards",
       },
     },
   },

@@ -1,4 +1,4 @@
-import React from 'react'
+import React from "react";
 
 function Footer() {
   return (
@@ -17,18 +17,7 @@ function Footer() {
             <div className="  hover:text-green-color mr-3 ml-3">درباره ما</div>
             <div className="  hover:text-green-color mr-3 ml-3  ">محصولات</div>
           </div>
-          {/* <div>
-            <ul className="grid grid-cols-4 gap-3 divide-x divide-gray-400 p-4 mx-auto text-center">
-              <li className="  hover:text-green-color  ">محصولات</li>
-              <li className=" hover:text-green-color">
-                کارفرمایان
-              </li>
-              <li className="  hover:text-green-color">
-                درباره ما
-              </li>
-              <li className="  hover:text-green-color  ">محصولات</li>
-            </ul>
-          </div> */}
+
           <div className="flex p-4  mx-auto text-center ">
             {/* telegram */}
             <div className="mr-2">
@@ -63,7 +52,6 @@ function Footer() {
                 </span>
               </a>
             </div>
-           
           </div>
         </div>
       </footer>
@@ -71,26 +59,4 @@ function Footer() {
   );
 }
 
-export default Footer
-
-{/* <footer id="footer-nav" className="h-32 bg-black  text-white">
-        <div className="container h-14 flex ">
-          <div class="row"><div class="col-md-3 col-md-push-9">
-            <div id="footer-socials"><div class="socials inline-inside socials-colored-hover">
-<a href="https://www.instagram.com/cncprojects/" target="_blank" title="Instagram" class="socials-item">
-<i class="socials-item-icon instagram">
-  </i></a>
-  </div></div>
-  </div>
-  <div class="col-md-6">
-    <nav id="footer-navigation" className="  site-navigation footer-navigation centered-box" role="navigation">
-      <ul id="footer-menu" className="  nav-menu styled clearfix inline-inside">
-        <li id="menu-item-35303" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-35303">
-          <a href="https://cncprojects.co.uk/contact/">Contact</a></li>
-          <li id="menu-item-35304" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-35304">
-            <a href="https://cncprojects.co.uk/faq/">FAQ’s</a></li>
-            <li id="menu-item-34477" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-34477">
-              <a href="https://cncprojects.co.uk/submit-a-job/">Submit a Job</a></li>
-              <li id="menu-item-34476" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-34476"><a href="https://cncprojects.co.uk/make-a-payment/">Make a Payment</a></li>
-              <li id="menu-item-34475" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-privacy-policy menu-item-34475"><a rel="privacy-policy" href="https://cncprojects.co.uk/privacy-policy/">Privacy Policy</a></li>
-              </ul></nav></div><div class="col-md-3 col-md-pull-9"><div class="footer-site-info">Copyright 2021 © <a href="https://cncprojects.co.uk">CNC Projects</a> Made with ♥ by <a href="https://insignia.org.uk">Insignia</a></div></div></div></div></footer> */}
+export default Footer;

@@ -21,10 +21,10 @@ function NavbarTest({ children }) {
   const menuItems = [
     "صفحه اصلی",
     "محصولات",
-    "کارفرمایان",
     "گالری",
-   
     "درباره ما",
+     "کارفرمایان",
+      "تماس با ما",
   ];
 
   // Mobile drawer (RTL)
@@ -153,7 +153,7 @@ function NavbarTest({ children }) {
             </a>
           </p>
           <p className="flex p-2 m-6 ">
-            <p>اراک، شهرک صنعتی حاجی آباد، خیابان حدید</p>
+            <span>اراک، شهرک صنعتی حاجی آباد، خیابان حدید</span>
             <svg
               xmlns="http://www.w3.org/2000/svg"
               fill="none"
@@ -196,8 +196,9 @@ function NavbarTest({ children }) {
             className=" m-4 flex-shrink-0 flex items-center md:ml-10"
           >
             <img
-              src="./src/images/logo2.png"
-              alt="لوگو"
+              src="/images/logo2.png"
+              alt="Logo"
+              loading="lazy"
               className={`transition-all duration-300 ease-in-out ${
                 scrolled ? "h-12 w-12" : "h-20 w-20"
               }`}
