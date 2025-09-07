@@ -9,6 +9,7 @@ import AccessAlarmIcon from "@mui/icons-material/AccessAlarm";
 import LocationCityIcon from "@mui/icons-material/LocationCity";
 import Icon from "@mui/material/Icon";
 import { Helmet } from "react-helmet-async";
+import Map from "../components/Map";
 
 const ContactUs = () => {
   const title = "راه ارتباطی| تماس با ما";
@@ -121,8 +122,12 @@ const ContactUs = () => {
         </div>
 
         {/* نقشه گوگل */}
-        <div className="w-full">
-          <iframe
+      
+         
+          <div className="w-full mt-8 h-full">
+            <img src="/images/map.png" alt="Map" className="w-full h-full " />
+          </div>
+          {/* <iframe
             title="Company Location"
             src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d6609.85443245512!2d49.82293367385865!3d34.07138000049823!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3fecbb832ac15d37%3A0x67d85911615a6f6d!2z2YHZiNmE2KfYryDYr9ix2K7YtNi0INit2K_bjNiv!5e0!3m2!1sen!2sus!4v1755522128663!5m2!1sen!2sus"
             width="100%"
@@ -131,8 +136,8 @@ const ContactUs = () => {
             allowFullScreen=""
             loading="lazy"
             referrerpolicy="no-referrer-when-downgrade"
-          ></iframe>
-        </div>
+          ></iframe> */}
+        
       </section>
     </>
   );

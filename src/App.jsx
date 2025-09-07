@@ -19,6 +19,7 @@ import Gallery from "./pages/Gallery";
 import { Helmet } from "react-helmet-async";
 
 
+
 function SeoDefaults() {
   return (
     <Helmet prioritizeSeoTags>
@@ -43,6 +44,7 @@ function Layout() {
     <>
       <SeoDefaults />
       <Outlet />
+    
     </>
   );
 }

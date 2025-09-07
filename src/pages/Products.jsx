@@ -82,8 +82,12 @@ function Products() {
 
           {/* 🟢 متن */}
           <div className="w-full lg:flex-1 px-4 pt-4 lg:pt-0 lg:ml-6 lg:mr-8 text-justify flex flex-col justify-center items-end">
-            <h2 className="mt-4 lg:mt-8 text-gray-700 text-lg lg:text-xl font-bold text-right">
+            {/* <h2 className="mt-4 lg:mt-8 text-gray-700 text-lg lg:text-xl font-bold text-right">
               خدمات خم CNC
+            </h2> */}
+
+            <h2 className="mt-4 lg:mt-8 text-gray-700 text-lg lg:text-xl font-bold text-right">
+              <span dir="ltr">CNC</span> خدمات خم
             </h2>
 
             <p
@@ -248,7 +252,7 @@ function Products() {
           {/* ✅ تصویر */}
           <div className="w-full lg:w-2/6 px-4 lg:px-0 mb-6 lg:mb-0 lg:ml-12">
             <img
-              className="w-full h-56 lg:h-full object-cover "
+              className="w-full h-56 lg:h-full  "
               loading="lazy"
               src="/images/hak.jpg"
               alt="خدمات حک لیزر فلزات"

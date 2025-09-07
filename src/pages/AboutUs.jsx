@@ -9,6 +9,8 @@ import AccessAlarmIcon from "@mui/icons-material/AccessAlarm";
 import LocationCityIcon from "@mui/icons-material/LocationCity";
 import Icon from "@mui/material/Icon";
 import { Helmet } from "react-helmet-async";
+
+
 const slides = [img1, img2];
 
 function AboutUs() {
@@ -33,18 +35,18 @@ function AboutUs() {
         <title>{title.slice(0, 60)}</title>
         <meta name="description" content={description.slice(0, 160)} />
       </Helmet>
-      <div className="h-300   mt-4 m-6  ">
+      <div className="h-auto  mt-4 m-6  ">
         <video
-          autoPlay
-          muted
-          loop
+         controls
           playsInline
           className="w-full h-auto pl-6 pr-6 pb-3 object-cover "
           preload="none"
-          poster="/images/picvideo-home.png"
+          poster="/images/aboutus.png"
+          title="About Us Video"
+          aria-label="معرفی شرکت فولاد درخشش حدید"
           // className="h-96 w-full pl-6 pr-6 pb-3 object-cover "
         >
-          <source src="/images/video-aboutus.mp4" type="video/mp4" />
+          <source src="/images/video-aboutus-compress.mp4" type="video/mp4" />
           Your browser does not support the video tag.
         </video>
 
@@ -110,17 +112,13 @@ function AboutUs() {
           </div>
 
           {/* نقشه گوگل */}
-          <div className="w-full">
-            <iframe
-              title="Company Location"
-              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d6609.85443245512!2d49.82293367385865!3d34.07138000049823!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3fecbb832ac15d37%3A0x67d85911615a6f6d!2z2YHZiNmE2KfYryDYr9ix2K7YtNi0INit2K_bjNiv!5e0!3m2!1sen!2sus!4v1755522128663!5m2!1sen!2sus"
-              width="100%"
-              height="450"
-              className="border-0"
-              allowFullScreen=""
-              loading="lazy"
-              referrerpolicy="no-referrer-when-downgrade"
-            ></iframe>
+          {/* <img
+            src="/images/map.png"
+            alt="Map"
+            className="w-full h-full object-cover"
+          /> */}
+          <div className="w-full mt-8 h-full">
+            <img src="/images/map.png" alt="Map" className="w-full h-full " />
           </div>
         </section>
       </div>

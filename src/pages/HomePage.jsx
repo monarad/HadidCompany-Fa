@@ -13,22 +13,31 @@ function HomePage() {
         <title>{title.slice(0, 60)}</title>
         <meta name="description" content={description.slice(0, 160)} />
       </Helmet>
-      <div className="h-300 mt-4 m-6  mx-4 sm:mx-6 ">
+      <div className="aspect-w-16 aspect-h-9 mt-4 m-6  mx-4 sm:mx-6 p-3">
         <video
-          autoPlay
-          muted
-          loop
+          controls // نمایش دکمه‌های پخش/توقف/صدا
           playsInline
-          className="w-full h-auto pl-6 pr-6 pb-3 object-cover "
+          
+          className="w-full h-full object-cover"
           preload="none"
           poster="/images/picvideo-home.png"
         >
-          <source
-            src="/images/video-logo-compressed.mp4"
-            type="video/mp4"
-          />
+          <source src="/images/video-logo-compress.mp4" type="video/mp4" />
           مرورگر شما از پخش ویدیو پشتیبانی نمی‌کند.
         </video>
+        {/* <video
+          autoPlay
+          muted
+         
+          loop
+          playsInline
+          className="w-full h-full  object-cover "
+          preload="none"
+          poster="/images/picvideo-home.png"
+        >
+          <source src="/images/video-logo-compressed.mp4" type="video/mp4" />
+          مرورگر شما از پخش ویدیو پشتیبانی نمی‌کند.
+        </video> */}
       </div>
       <div className="flex flex-col items-center justify-center align-middle bg-white text-center px-4">
         {/* عنوان اصلی */}
@@ -95,15 +104,14 @@ function HomePage() {
           data-aos-delay="1000"
         >
           <video
-            autoPlay
-            muted
-            loop
+            controls // نمایش دکمه‌های پخش/توقف/صدا
             playsInline
+          
             poster="/images/picvideo-home.png"
             preload="none"
             className="w-full h-full object-cover"
           >
-            <source src="/images/video1homepage.mp4" type="video/mp4" />
+            <source src="/images/videohomepage-compress.mp4" type="video/mp4" />
             Your browser does not support the video tag.
           </video>
         </div>
@@ -114,8 +122,12 @@ function HomePage() {
           data-aos-delay="0"
         >
           <h2 className="text-xl sm:text-2xl font-bold text-gray-800 mb-6 text-right">
-            خمکاری CNC شش محور
+            خمکاری <span dir="ltr">CNC</span> شش محور
           </h2>
+
+          {/* <h2 className="text-xl sm:text-2xl font-bold text-gray-800 mb-6 text-right">
+            خمکاری CNC شش محور
+          </h2> */}
           <p className="text-right leading-loose px-2 sm:px-4 lg:px-0">
             خمکاری با دستگاه ۶ محور، این امکان را به ما می‌دهد که قطعات با
             پیچیدگی‌های بالا را با دقت مطلوب به محصول تبدیل نماییم
@@ -147,15 +159,18 @@ function HomePage() {
           data-aos-delay="1000"
         >
           <video
-            autoPlay
-            muted
-            loop
+           controls
+          
+           
             playsInline
             className="w-full h-full object-cover "
             preload="none"
             poster="/images/picvideo-home.png"
           >
-            <source src="/images/video2-homepage.mp4" type="video/mp4" />
+            <source
+              src="/images/video2-homepage-compress.mp4"
+              type="video/mp4"
+            />
             Your browser does not support the video tag.
           </video>
         </div>
